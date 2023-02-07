@@ -1,0 +1,8 @@
+<div id="fish-content">
+  <div>
+    <div *ngFor="let fi of fishIds" [routerLink]="['/fish',fi]"><!-- Cliquer sur ce div mène vers fish/:id -->
+      <img [src]="'../../assets/images/fish' + fi + '.png'" [alt]="'Poisson #' + fi"
+           >
+    </div>
+  </div>
+</div>

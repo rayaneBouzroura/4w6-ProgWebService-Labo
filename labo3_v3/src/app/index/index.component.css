@@ -1,0 +1,43 @@
+.menu{
+    display:flex;
+    justify-content: center;
+    gap:5px;
+    margin:10px 0px;
+}
+
+.menu>div{
+    text-align:center;
+    position:relative;
+    background-image:linear-gradient(#99e7c4, #5ab78d);
+    border-radius:10px;
+    padding:25px 5px 5px 5px;
+    flex-basis: 38%;
+
+}
+
+.menu img{
+    cursor:pointer;
+    width:64px;
+}
+
+.menu>div:hover{
+    background-image:linear-gradient(#defff0, #99e7c4);
+}
+
+.miniTitle{
+    position:absolute;
+    color:white;
+    top:5px;
+    left: 0; 
+    right: 0; 
+    font-weight: bold;
+
+}
+
+hr{
+    color:#82C9A6;
+    background-color:#5ab78d;
+    border:none;
+    height:5px;
+    margin:0px;
+}

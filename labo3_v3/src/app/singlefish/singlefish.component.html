@@ -1,0 +1,12 @@
+<div *ngIf="fish" class="card">
+  <img [src]="fish.icon" [alt]="'Poisson #' + fish.id">
+  <div>Poisson #{{fish.id}}</div>
+  <div>Nom : {{fish.name}}</div>
+  <div>Habitat : {{fish.location}}</div>
+  <div>Rareté : {{fish.rarity}}</div>
+  <div>Prix : {{fish.price}}</div>
+  <button [routerLink]="['/fish']">Retour à la liste</button>
+</div>
+<div *ngIf="!fish">
+  Chargement des données...
+</div>

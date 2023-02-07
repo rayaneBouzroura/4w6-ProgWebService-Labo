@@ -1,0 +1,12 @@
+<div *ngIf="bug">
+    <img [src]="bug.icon" [alt]="'Insecte #' + bug.id">
+     <div>Bebite #{{bug.id}}</div>
+     <div>Nom : {{bug.name}}</div>
+     <div>Habitat : {{bug.location}}</div>
+     <div>Rareté : {{bug.rarity}}</div>
+     <div>Prix : {{bug.price}}</div>
+ </div>
+ <div *ngIf="!bug">
+     <p>Sélectionnez une bebite...</p>
+ </div>
+ 

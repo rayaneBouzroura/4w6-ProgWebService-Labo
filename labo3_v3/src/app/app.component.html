@@ -1,0 +1,27 @@
+<div id="container">
+  <header>
+    Traversée d'animaux
+  </header>
+  <hr>
+  <nav>
+    <a [routerLink]="['index']">Accueil</a>
+    <a [routerLink]="['fish']">Poissons</a>
+    <a [routerLink]="['bugs']">Bebites</a>
+  </nav>
+  <hr>
+  <main>
+
+    <!-- À CHANGER
+    <app-index></app-index>
+    <hr>
+    <app-fish></app-fish>
+    <hr>
+    <app-bugs></app-bugs> -->
+    <router-outlet></router-outlet>
+
+  </main>
+  <hr>
+  <footer>
+    Tous droits réservés à Nintendo &copy;
+  </footer>
+</div>

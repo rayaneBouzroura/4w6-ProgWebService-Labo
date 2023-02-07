@@ -1,0 +1,25 @@
+#fish-content{
+    display:flex;
+    margin:10px 0px;
+    color:#3f8a69;
+    font-family:helvetica;
+    font-size:1.2em;
+    font-weight:bold;
+    justify-content: center;
+}
+
+#fish-content>div{
+    display:flex;
+    flex-wrap: wrap;
+    width:700px;
+    padding:10px;
+}
+
+#fish-content>div{
+    cursor:pointer;
+    opacity:1;
+}
+
+#fish-content>div>div:hover{
+    opacity:0.7;
+}

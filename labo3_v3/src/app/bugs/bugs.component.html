@@ -1,0 +1,12 @@
+<div id="bug-content">
+  <div>
+    <!-- Affichage de la bebite sélectionnée ici -->
+    <app-singlebug [bug]="selectedBug"></app-singlebug>
+  </div>
+  <div>
+    <div (click)="selectBug(bi)" *ngFor="let bi of bugIds"
+     [class]="(selectedBug && selectedBug.id == bi) ? 'selected' : ''">
+      <img [src]="'../../assets/images/bug' + bi + '.png'" [alt]="'Insecte #' + bi">
+    </div>
+  </div>
+</div>
