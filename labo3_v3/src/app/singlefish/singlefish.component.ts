@@ -1,4 +1,4 @@
-import { HttpService } from './../http.service';
+import { HttpService } from '../services/http.service';
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
