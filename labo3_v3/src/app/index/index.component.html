@@ -2,12 +2,12 @@
 
   <div [routerLink]="['/fish']"><!-- Ce div doit être cliquable et mener vers le composant Fish -->
     <div class="miniTitle">Poissons</div>
-    <img *ngFor="let fi of fishIds" [src]="'../../assets/images/fish' + fi + '.png'" [alt]="'Fish #' + fi">
+    <img *ngFor="let fi of this.data.fishIds" [src]="'../../assets/images/fish' + fi + '.png'" [alt]="'Fish #' + fi">
   </div>
 
   <div [routerLink]="['/bugs']"><!-- Ce div doit être cliquable et mener vers le composant Bugs -->
     <div class="miniTitle">Bebites</div>
-    <img *ngFor="let bi of bugIds" [src]="'../../assets/images/bug' + bi + '.png'" [alt]="'Bug #' + bi">
+    <img *ngFor="let bi of this.data.bugIds" [src]="'../../assets/images/bug' + bi + '.png'" [alt]="'Bug #' + bi">
   </div>
   
 </div>
