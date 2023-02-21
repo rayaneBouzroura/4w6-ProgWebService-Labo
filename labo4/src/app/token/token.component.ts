@@ -16,10 +16,12 @@ export class TokenComponent implements OnInit {
 
   ngOnInit() {
     // Allo 👋
+    this.spotify.connect();
   }
 
   async getArtist() : Promise<void>{
     // Allo 👋
+    this.artist = await this.spotify.searchArtist(this.artistName);
   }
 
 }

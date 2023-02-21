@@ -10,9 +10,12 @@ export class I18nComponent implements OnInit {
 
   money : number = 30;
   number ?: number;
-  language : string = "fr";
+  language : string = "en";
 
-  constructor() {}
+  constructor(public translator : TranslateService) {
+    translator.setDefaultLang(this.language);
+    translator.use(this.language);
+  }
 
   ngOnInit() {}
 
@@ -40,7 +43,10 @@ export class I18nComponent implements OnInit {
   ballMover : any;
   gameActive : boolean = false;
   bet : any;
-
+  changeLanguage(lang : string){
+    this.language = lang;
+    this.translator.use(this.language);
+  }
   startGame(){
 
     if(this.money < 5){
@@ -53,7 +59,7 @@ export class I18nComponent implements OnInit {
     this.money -= 5;
     this.gameActive = true;
     this.ballMover = setInterval(this.moveBall.bind(this), 25);
-    this.ballSpeed = Math.round(Math.random() * 37) + 74; 
+    this.ballSpeed = Math.round(Math.random() * 37) + 74;
 
   }
 

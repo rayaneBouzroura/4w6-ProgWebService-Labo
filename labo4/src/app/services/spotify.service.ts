@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { lastValueFrom } from 'rxjs';
 import { Artist } from '../models/artist';
 
-const CLIENT_ID : string = "";
-const CLIENT_SECRET : string = "";
+const CLIENT_ID : string = "abf8bf0778a64d1e8c909e408ea1581f";
+const CLIENT_SECRET : string = "da7e99dfea0a446494b19a574d87a571";
 
 @Injectable({
   providedIn: 'root'
@@ -33,11 +33,11 @@ export class SpotifyService {
       'Content-Type':  'application/json',
       'Authorization': 'Bearer ' + this.spotifyToken
     })};
-    
+
     let x = await lastValueFrom(this.http.get<any>('https://api.spotify.com/v1/search?type=artist&offset=0&limit=1&q=' + artist, httpOptions));
     console.log(x);
     return new Artist(x.artists.items[0].id, x.artists.items[0].name, x.artists.items[0].images[0].url);
   }
-    
-  
+
+
 }

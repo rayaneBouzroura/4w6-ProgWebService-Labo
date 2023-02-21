@@ -11,6 +11,7 @@ export class StockageComponent implements OnInit {
   name ?: string; // Lié à un input
   age ?: number; // Lié à un input
   profile ?: Profile;
+  stringifiedProfile : string | null = null ;
 
   constructor() { }
 
@@ -18,6 +19,11 @@ export class StockageComponent implements OnInit {
     this.afficherIcones();
 
     // Allo 👋
+    //lors de la creation
+    this.stringifiedProfile = sessionStorage.getItem("profile");
+    if(this.stringifiedProfile !=null){
+      this.profile = JSON.parse(this.stringifiedProfile);
+    }
   }
 
   createProfile() : void{
@@ -25,6 +31,7 @@ export class StockageComponent implements OnInit {
       return;
     }
     this.profile = new Profile(this.name, this.age, 20);
+    this.saveProfile();
   }
 
   clearProfile() : void{
@@ -34,6 +41,8 @@ export class StockageComponent implements OnInit {
   // Vous pouvez appeler cette fonction à tous les endroits où le profil change 😉
   saveProfile():void{
     // METTRE this.profile DANS LE STOCKAGE LOCAL 💾
+    sessionStorage.setItem("profile",JSON.stringify(this.profile))
+
   }
 
   finJeu(){
