@@ -1,3 +1,4 @@
+import { DataService } from '../services/data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,10 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexComponent implements OnInit {
 
-  fishIds : number[] = [1,2,40,49,50,51,55,56,60,67];
-  bugIds : number[] = [2,8,14,16,24,35,41,43,67,69];
 
-  constructor() { }
+  constructor(public data : DataService) { }
 
   ngOnInit() {
   }

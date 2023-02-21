@@ -4,7 +4,7 @@
     <app-singlebug [bug]="selectedBug"></app-singlebug>
   </div>
   <div>
-    <div (click)="selectBug(bi)" *ngFor="let bi of bugIds"
+    <div (click)="selectBug(bi)" *ngFor="let bi of this.data.bugIds"
      [class]="(selectedBug && selectedBug.id == bi) ? 'selected' : ''">
       <img [src]="'../../assets/images/bug' + bi + '.png'" [alt]="'Insecte #' + bi">
     </div>
