@@ -1,0 +1,37 @@
+<h1>Boutique</h1>
+<p>Merci de préciser les détails de votre commande</p>
+
+<form class="example-form" (ngSubmit)="commander()">
+
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Entrez votre nom</mat-label>
+    <input matInput placeholder="Ex. Jérémie-Félix">
+  </mat-form-field><br>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Que voulez-vous manger ?</mat-label>
+    <mat-select>
+      <mat-option value="Hot-dog">Hot-dog</mat-option>
+      <mat-option value="Pizza">Pizza</mat-option>
+      <mat-option value="Sous-marin">Sous-marin</mat-option>
+      <mat-option value="Crotte">Crotte de fromage</mat-option>
+    </mat-select>
+  </mat-form-field><br>
+
+    <mat-label>Que voulez-vous boire ?</mat-label><br>
+    <mat-radio-group aria-label="Select an option">
+      <mat-radio-button value="1">Eau</mat-radio-button>
+      <mat-radio-button value="2">Thé</mat-radio-button>
+      <mat-radio-button value="3">Lave</mat-radio-button>
+    </mat-radio-group><br><br>
+    <mat-slide-toggle >
+      Commande urgente ?
+    </mat-slide-toggle> <br />
+
+
+
+
+
+
+  <button mat-raised-button color="primary" type="submit">Commander</button>
+</form>

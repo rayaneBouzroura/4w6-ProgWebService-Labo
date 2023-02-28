@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+
+main{
+    color:#3F51B5;
+    padding:20px;
+}
+
+.example-form mat-form-field{
+    width:300px;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
