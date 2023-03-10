@@ -9,6 +9,7 @@ import { PlumbingComponent } from './plumbing/plumbing.component';
 import { BalloonMapComponent } from './balloonMap/balloonMap.component';
 import { YoutubeSearchComponent } from './youtubeSearch/youtubeSearch.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { SpecialPipe } from './pipes/special.pipe';
 
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
@@ -19,7 +20,8 @@ registerLocaleData(localeFr, 'fr');
     AppComponent,
     YoutubeSearchComponent,
     PlumbingComponent,
-    BalloonMapComponent
+    BalloonMapComponent,
+    SpecialPipe
   ],
   imports: [
     BrowserModule,

@@ -22,9 +22,10 @@
       [zoom]="zoom"
       width="700"
       height="300">
-      <!--
-        Affichez les marqueurs ici
-      -->
+      <map-marker
+        *ngFor="let marker of markerPositions"
+        [position]="marker">
+      </map-marker>
     </google-map>
   </div>
 </div>

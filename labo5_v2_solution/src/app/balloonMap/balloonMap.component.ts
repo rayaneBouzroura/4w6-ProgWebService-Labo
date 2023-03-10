@@ -13,7 +13,9 @@ export class BalloonMapComponent implements OnInit {
   center : google.maps.LatLngLiteral = {lat: 42, lng: -4};
   zoom : number = 2;
 
-  // Ajoutez une variable de classe qui servira de tableau de marqueurs
+  markerPositions : google.maps.LatLngLiteral[] = [
+    {lat: 42, lng: -4}
+  ];
 
   constructor() { }
 
@@ -21,11 +23,11 @@ export class BalloonMapComponent implements OnInit {
   }
 
   addBalloon() : void {
-    // Ajoutez un marqueur dans votre tableau de marqueurs en vous servant des données this.inputLat et this.inputLng !
+    this.markerPositions.push({lat: this.inputLat, lng : this.inputLng});
   }
 
   clearBalloons() : void {
-    // Videz le tableau de marqueurs ! (= [])
+    this.markerPositions = [];
   }
 
 }

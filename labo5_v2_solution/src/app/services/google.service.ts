@@ -12,12 +12,10 @@ export class GoogleService {
 
   constructor(public http : HttpClient) { }
 
-  searchVideoId(searchText : string) : string{
-
-    // Requête pour obtenir l'Id d'une vidéo YouTube ici ! Utilisez le paramètre searchText.
-
-    // Remplacez ce return par l'id de la vidéo obtenue.
-    return "6bXvIEh0WU8";
+  async searchVideoId(searchText : string) : Promise<string>{
+    let x = await lastValueFrom(this.http.get<any>("https://www.googleapis.com/youtube/v3/search?type=video&part=id&maxResults=1&key=" + googleApiKey + "&q=" + searchText));
+    console.log(x);
+    return x.items[0].id.videoId;
   }
 
 }
